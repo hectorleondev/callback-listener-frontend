@@ -92,9 +92,9 @@ done
 echo ""
 echo "5. Testing health endpoint..."
 HEALTH_RESPONSE=$(curl -s http://localhost:$TEST_PORT/api/health)
-if echo "$HEALTH_RESPONSE" | grep -q '"status": "healthy"'; then
+if echo "$HEALTH_RESPONSE" | grep -q '"status"[[:space:]]*:[[:space:]]*"healthy"'; then
     echo -e "${GREEN}✅ Health check passed${NC}"
-    echo "Health status: $(echo "$HEALTH_RESPONSE" | grep -o '"status": "[^"]*"')"
+    echo "Health status: $(echo "$HEALTH_RESPONSE" | grep -o '"status"[[:space:]]*:[[:space:]]*"[^"]*"')"
 else
     echo -e "${RED}❌ Health check failed${NC}"
     echo "Response: $HEALTH_RESPONSE"
