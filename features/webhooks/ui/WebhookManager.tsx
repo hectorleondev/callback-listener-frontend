@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+
 import { SearchX, SlidersHorizontal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -63,7 +65,7 @@ export function WebhookManager() {
             </div>
             
             <Button
-              variant={hasActiveFilters ? "default" : "outline"} 
+              variant={hasActiveFilters ? 'default' : 'outline'} 
               size="icon"
               onClick={() => setShowFilters(!showFilters)}
             >
@@ -84,12 +86,12 @@ export function WebhookManager() {
         </div>
         
         <div className={cn(
-          "grid gap-4 rounded-lg border bg-card p-4 transition-all",
-          showFilters ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+          'grid gap-4 rounded-lg border bg-card p-4 transition-all',
+          showFilters ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
         )}>
           <div className={cn(
-            "overflow-hidden transition-all",
-            showFilters ? "opacity-100" : "opacity-0"
+            'overflow-hidden transition-all',
+            showFilters ? 'opacity-100' : 'opacity-0'
           )}>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
               <div className="space-y-2">

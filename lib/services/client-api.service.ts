@@ -3,6 +3,16 @@ import type { ApiResponse } from '@/features/common/types/api.types';
 import type { CapturedRequest, GetLogsOptions } from '@/features/requests/types/request.types';
 import type { WebhookPath, CreateWebhookRequest } from '@/features/webhooks/types/webhook.types';
 
+// Define RequestInit interface based on fetch API
+interface RequestInit {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string | FormData;
+  credentials?: 'include' | 'omit' | 'same-origin';
+  mode?: 'cors' | 'no-cors' | 'same-origin';
+  cache?: 'default' | 'no-cache' | 'reload' | 'force-cache' | 'only-if-cached';
+}
+
 class ClientApiService {
   private baseUrl: string;
   

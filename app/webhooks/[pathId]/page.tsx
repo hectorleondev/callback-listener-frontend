@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 interface WebhookPageProps {
   params: {
@@ -27,18 +28,18 @@ export default function WebhookPage({ params }: WebhookPageProps) {
             </p>
           </div>
           <div className="flex gap-2">
-            <a
+            <Link
               href={`/webhooks/${params.pathId}/logs`}
-              className="inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent"
+              className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
             >
               View Logs
-            </a>
-            <a
+            </Link>
+            <Link
               href="/webhooks"
               className="inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent"
             >
               All Webhooks
-            </a>
+            </Link>
           </div>
         </div>
         
@@ -70,7 +71,7 @@ export default function WebhookPage({ params }: WebhookPageProps) {
             <div className="bg-muted p-4 rounded-md overflow-x-auto">
               <pre className="text-sm">
                 <code>
-{`curl -X POST \
+                  {`curl -X POST \
   "${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001'}/api/webhooks/${params.pathId}" \
   -H "Content-Type: application/json" \
   -d '{ "message": "Hello from webhook!" }'`}

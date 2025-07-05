@@ -127,8 +127,8 @@ export default function DashboardPage() {
                 <h4 className="font-semibold mb-2">Example Usage:</h4>
                 <div className="font-mono text-sm bg-background p-3 rounded border">
                   <div>{`curl -X POST ${apiUrl}/webhook/my-endpoint \\`}</div>
-                  <div>&nbsp;&nbsp;{`-H "Content-Type: application/json" \\`}</div>
-                  <div>&nbsp;&nbsp;{`-d '{"message": "Hello from my app!"}'`}</div>
+                  <div>&nbsp;&nbsp;{'-H "Content-Type: application/json" \\'}</div>
+                  <div>&nbsp;&nbsp;{'-d \'{"message": "Hello from my app!"}\''}</div>
                 </div>
               </div>
             </CardContent>

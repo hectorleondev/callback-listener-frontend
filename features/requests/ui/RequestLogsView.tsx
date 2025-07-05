@@ -46,9 +46,9 @@ export function RequestLogsView({ pathId }: RequestLogsViewProps) {
   
   const handleCopy = () => {
     toast({
-      title: "URL copied to clipboard",
-      description: "Webhook URL has been copied to your clipboard.",
-      variant: "success",
+      title: 'URL copied to clipboard',
+      description: 'Webhook URL has been copied to your clipboard.',
+      variant: 'success',
     });
   };
   

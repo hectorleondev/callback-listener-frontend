@@ -22,7 +22,7 @@ export function DashboardContent() {
         title="Failed to load dashboard data"
         description="An unexpected error occurred while loading the dashboard data. Please try again."
         action={{
-          label: "Try Again",
+          label: 'Try Again',
           onClick: () => window.location.reload(),
         }}
       />

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { AppProviders } from '@/lib/providers/AppProviders';
@@ -7,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'CallbackListener - Webhook Monitoring Dashboard',
   description: 'A modern webhook monitoring dashboard for developers',
-}
+};
 
 export default function RootLayout({
   children,
