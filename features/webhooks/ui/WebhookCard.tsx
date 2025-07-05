@@ -37,9 +37,9 @@ export function WebhookCard({ webhook }: WebhookCardProps) {
 
   const handleCopy = () => {
     toast({
-      title: "URL copied to clipboard",
-      description: "Webhook URL has been copied to your clipboard.",
-      variant: "success",
+      title: 'URL copied to clipboard',
+      description: 'Webhook URL has been copied to your clipboard.',
+      variant: 'success',
     });
   };
 
@@ -135,7 +135,7 @@ export function WebhookCard({ webhook }: WebhookCardProps) {
                     <h3 className="font-medium">cURL Example</h3>
                     <div className="rounded-md bg-muted p-2">
                       <code className="block overflow-x-auto whitespace-pre text-xs">
-{`curl -X POST ${webhookUrl} \\
+                        {`curl -X POST ${webhookUrl} \\
   -H "Content-Type: application/json" \\
   -d '{"event": "user.created", "data": {"id": 123, "name": "John Doe"}}'`}
                       </code>
@@ -149,7 +149,7 @@ export function WebhookCard({ webhook }: WebhookCardProps) {
                     <h3 className="font-medium">JavaScript Example</h3>
                     <div className="rounded-md bg-muted p-2">
                       <code className="block overflow-x-auto whitespace-pre text-xs">
-{`fetch("${webhookUrl}", {
+                        {`fetch("${webhookUrl}", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({

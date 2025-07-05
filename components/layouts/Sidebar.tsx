@@ -83,8 +83,8 @@ export function Sidebar() {
           <Link
             href="/"
             className={cn(
-              "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-muted transition-colors",
-              pathname === "/" && "bg-muted"
+              'flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-muted transition-colors',
+              pathname === '/' && 'bg-muted'
             )}
           >
             <BarChart3 className="h-4 w-4" />
@@ -93,8 +93,8 @@ export function Sidebar() {
           <Link
             href="/webhooks"
             className={cn(
-              "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-muted transition-colors",
-              pathname === "/webhooks" && "bg-muted"
+              'flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-muted transition-colors',
+              pathname === '/webhooks' && 'bg-muted'
             )}
           >
             <Webhook className="h-4 w-4" />
@@ -129,14 +129,14 @@ export function Sidebar() {
                   key={webhook.id}
                   href={`/webhooks/${webhook.path_id}/logs`}
                   className={cn(
-                    "flex items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-muted transition-colors",
-                    pathname === `/webhooks/${webhook.path_id}/logs` && "bg-muted"
+                    'flex items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-muted transition-colors',
+                    pathname === `/webhooks/${webhook.path_id}/logs` && 'bg-muted'
                   )}
                 >
                   <div className="flex items-center gap-3 overflow-hidden">
                     <span className={cn(
-                      "h-1.5 w-1.5 rounded-full",
-                      webhook.status === "active" ? "bg-success" : "bg-destructive"
+                      'h-1.5 w-1.5 rounded-full',
+                      webhook.status === 'active' ? 'bg-success' : 'bg-destructive'
                     )} />
                     <span className="truncate">{webhook.path_id}</span>
                   </div>

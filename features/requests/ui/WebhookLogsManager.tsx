@@ -40,7 +40,7 @@ export function WebhookLogsManager({ pathId }: WebhookLogsManagerProps) {
         title="Failed to load request logs"
         description="We couldn't load the request logs for this webhook. Please try again later."
         action={{
-          label: "Retry",
+          label: 'Retry',
           onClick: handleRefresh,
         }}
       />
@@ -82,8 +82,8 @@ export function WebhookLogsManager({ pathId }: WebhookLogsManagerProps) {
           </CardHeader>
           <CardContent>
             <div className="flex items-center space-x-2">
-              <Badge variant={autoRefresh ? "default" : "secondary"}>
-                {autoRefresh ? "ON" : "OFF"}
+              <Badge variant={autoRefresh ? 'default' : 'secondary'}>
+                {autoRefresh ? 'ON' : 'OFF'}
               </Badge>
               <Button
                 variant="ghost"
@@ -117,7 +117,7 @@ export function WebhookLogsManager({ pathId }: WebhookLogsManagerProps) {
             onClick={handleRefresh}
             disabled={isLoading}
           >
-            <RefreshCw className={cn("h-4 w-4 mr-2", isLoading && "animate-spin")} />
+            <RefreshCw className={cn('h-4 w-4 mr-2', isLoading && 'animate-spin')} />
             Refresh
           </Button>
           
@@ -131,7 +131,7 @@ export function WebhookLogsManager({ pathId }: WebhookLogsManagerProps) {
           </Button>
           
           <Button
-            variant={showFilters ? "default" : "outline"}
+            variant={showFilters ? 'default' : 'outline'}
             size="sm"
             onClick={() => setShowFilters(!showFilters)}
           >
@@ -179,12 +179,12 @@ export function WebhookLogsManager({ pathId }: WebhookLogsManagerProps) {
           title="No requests found"
           description={
             filters.method || filters.search || filters.dateRange.from
-              ? "No requests match your current filters. Try adjusting your search criteria."
-              : "No requests have been made to this webhook yet. Start sending HTTP requests to see them here."
+              ? 'No requests match your current filters. Try adjusting your search criteria.'
+              : 'No requests have been made to this webhook yet. Start sending HTTP requests to see them here.'
           }
           action={
             filters.method || filters.search || filters.dateRange.from
-              ? { label: "Clear Filters", onClick: resetFilters }
+              ? { label: 'Clear Filters', onClick: resetFilters }
               : undefined
           }
         />

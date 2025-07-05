@@ -8,18 +8,18 @@ import { formatDistanceToNow } from 'date-fns';
 
 function getMethodColor(method: string) {
   switch (method.toUpperCase()) {
-    case 'GET':
-      return 'bg-blue-500/10 text-blue-700 dark:text-blue-400';
-    case 'POST':
-      return 'bg-green-500/10 text-green-700 dark:text-green-400';
-    case 'PUT':
-      return 'bg-yellow-500/10 text-yellow-700 dark:text-yellow-400';
-    case 'DELETE':
-      return 'bg-red-500/10 text-red-700 dark:text-red-400';
-    case 'PATCH':
-      return 'bg-purple-500/10 text-purple-700 dark:text-purple-400';
-    default:
-      return 'bg-gray-500/10 text-gray-700 dark:text-gray-400';
+  case 'GET':
+    return 'bg-blue-500/10 text-blue-700 dark:text-blue-400';
+  case 'POST':
+    return 'bg-green-500/10 text-green-700 dark:text-green-400';
+  case 'PUT':
+    return 'bg-yellow-500/10 text-yellow-700 dark:text-yellow-400';
+  case 'DELETE':
+    return 'bg-red-500/10 text-red-700 dark:text-red-400';
+  case 'PATCH':
+    return 'bg-purple-500/10 text-purple-700 dark:text-purple-400';
+  default:
+    return 'bg-gray-500/10 text-gray-700 dark:text-gray-400';
   }
 }
 

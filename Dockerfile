@@ -43,17 +43,15 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-# Copy built application
-COPY --from=builder /app/public ./public
-
-# Set the correct permission for prerender cache
-RUN mkdir -p .next
-RUN chown nextjs:nodejs .next
+# Create directories for static files and Next.js output
+RUN mkdir -p ./public/
+RUN mkdir -p .next/
+RUN chown nextjs:nodejs .next/
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static/
 
 USER nextjs
 

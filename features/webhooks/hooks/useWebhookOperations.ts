@@ -126,13 +126,13 @@ export function useDeleteWebhook() {
     onSuccess: (result) => {
       if (result.success) {
         toast({
-          variant: "success",
-          title: "Webhook deleted successfully",
+          variant: 'success',
+          title: 'Webhook deleted successfully',
         });
       } else {
         toast({
-          variant: "destructive",
-          title: "Failed to delete webhook",
+          variant: 'destructive',
+          title: 'Failed to delete webhook',
           description: result.error,
         });
       }
@@ -140,9 +140,9 @@ export function useDeleteWebhook() {
     onError: (error, variables, context) => {
       queryClient.setQueryData(['webhooks'], context?.previousWebhooks);
       toast({
-        variant: "destructive",
-        title: "Failed to delete webhook",
-        description: "An unexpected error occurred. Please try again.",
+        variant: 'destructive',
+        title: 'Failed to delete webhook',
+        description: 'An unexpected error occurred. Please try again.',
       });
     },
     onSettled: () => {

@@ -60,7 +60,7 @@ export function WebhookList() {
         title="Failed to load webhooks"
         description="We couldn't load your webhook paths. Please try again later."
         action={{
-          label: "Refresh",
+          label: 'Refresh',
           onClick: () => window.location.reload(),
         }}
       />
@@ -74,7 +74,7 @@ export function WebhookList() {
           title="No matching webhooks"
           description="Try adjusting your filters to find what you're looking for."
           action={{
-            label: "Clear Filters",
+            label: 'Clear Filters',
             onClick: () => useWebhookStore.getState().resetFilters(),
           }}
         />
@@ -86,7 +86,7 @@ export function WebhookList() {
         title="No webhooks found"
         description="Get started by creating your first webhook endpoint."
         action={{
-          label: "Create Webhook",
+          label: 'Create Webhook',
           onClick: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
         }}
       />

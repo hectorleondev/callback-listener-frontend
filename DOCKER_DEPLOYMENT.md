@@ -290,7 +290,7 @@ services:
       - backend
   
   backend:
-    build: ./backend
+    build: ./
     ports:
       - "5000:5000"
     environment:

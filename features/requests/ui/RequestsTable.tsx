@@ -54,7 +54,7 @@ export function RequestsTable({
         title="Failed to load requests"
         description="We couldn't load the request logs for this webhook. Please try again."
         action={{
-          label: "Try Again",
+          label: 'Try Again',
           onClick: () => window.location.reload(),
         }}
       />

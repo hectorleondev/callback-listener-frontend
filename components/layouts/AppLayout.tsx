@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { Sidebar } from '@/components/layouts/Sidebar';
 import { Header } from '@/components/layouts/Header';
 import { useUiStore } from '@/lib/stores/uiStore';
@@ -18,8 +19,8 @@ export function AppLayout({ children }: AppLayoutProps) {
       <div className="flex flex-1">
         <Sidebar />
         <main className={cn(
-          "flex-1 transition-all duration-200",
-          sidebarOpen ? "md:ml-64" : ""
+          'flex-1 transition-all duration-200',
+          sidebarOpen ? 'md:ml-64' : ''
         )}>
           <div className="container mx-auto p-4 md:p-8">
             {children}

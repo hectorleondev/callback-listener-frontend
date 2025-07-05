@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { WebhookLogsManager } from '@/features/requests/ui/WebhookLogsManager';
 
 interface WebhookLogsPageProps {
@@ -28,18 +29,18 @@ export default function WebhookLogsPage({ params }: WebhookLogsPageProps) {
             </p>
           </div>
           <div className="flex gap-2">
-            <a
+            <Link
               href={`/webhooks/${params.pathId}`}
               className="inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent"
             >
               ← Back to Webhook
-            </a>
-            <a
+            </Link>
+            <Link
               href="/webhooks"
               className="inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm font-medium hover:bg-accent"
             >
               All Webhooks
-            </a>
+            </Link>
           </div>
         </div>
         
